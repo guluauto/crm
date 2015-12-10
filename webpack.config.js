@@ -3,15 +3,17 @@ var webpack = require('webpack');
 var LessPluginCleanCSS = require('less-plugin-clean-css');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var pkg = require('./package.json');
 
 module.exports = {
+  watch: true,
   entry: {
     index: './src/asset/js/questionary/index.js',
     vendor: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './node_modules/zepto/dist/zepto.js']
   },
   output: {
-    path: path.join(__dirname, 'assets'),
-    publicPath: 'assets',
+    path: path.resolve(__dirname, pkg.dest),
+    publicPath: pkg.dest,
     filename: '[name].js',
     chunkFilename: "[id].chunk.js"
   },
