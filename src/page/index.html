@@ -21,220 +21,233 @@
   <!-- <link href="./css/global.css" rel="stylesheet" /> -->
 </head>
 <body>
-  <h1>购车意向调查</h1>
-  <form class="form">
-    <div class="input">
-      <input type="text" placeholder="销售姓名" />
-    </div>
-    <div class="input">
-      <input type="text" placeholder="客户姓名" />
-    </div>
-    <dl class="questions">
-      <dt class="question">1. 车主年龄</dt>
-      <dd class="answers">
-        <div class="input">
-          <input type="tel" placeholder="车主年龄" name="cznn"></div>
-        </div>
-      </dd>
-
-      <dt class="question">2. 考虑用车人数</dt>
-      <dd class="answers inline">
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="klycrs" value="1-2人" />1-2人</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="klycrs" value="3-4人" />3-4人</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="klycrs" value="5人" />5人</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="klycrs" value="5人以上" />5人以上</label>
-          </div>
-        </div>
-      </dd>
-
-      <dt class="question">3. 是否首辆车</dt>
-      <dd class="answers inline">
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="sfslc" value="首辆" />首辆</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="sfslc" value="非首辆" />非首辆</label>
-          </div>
-        </div>
-      </dd>
-
-      <dt class="question">4. 车牌需求</dt>
-      <dd class="answers inline">
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="cpxq" value="有沪牌置换车" />有沪牌置换车</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="cpxq" value="在拍沪牌未中" />在拍沪牌未中</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="cpxq" value="计划拍沪牌" />计划拍沪牌</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="cpxq" value="上外牌" />上外牌</label>
-          </div>
-        </div>
-      </dd>
-
-      <dt class="question">5. 偏好车款</dt>
-      <dd class="answers">
-        <div class="field">
-          <label>首选</label>
-          <div class="select">
-            <select name="phck_sx">
-              <option>车款1</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label>次选（选填）</label>
-          <div class="select">
-            <select name="phck_cx">
-              <option>车款1</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label>备选（选填）</label>
-          <div class="select">
-            <select name="phck_bx">
-              <option>车款1</option>
-            </select>
-          </div>
-        </div>
-      </dd>
-
-      <dt class="question">6. 偏好颜色</dt>
-      <dd class="answers">
+  <div class="page">
+    <h1 class="title">购车意向调查</h1>
+    <form class="form">
+      <div class="poster">
         <div class="field">
           <div class="input">
-            <input type="text" name="sxcsys" placeholder="首选车身颜色" />
+            <input type="text" placeholder="销售姓名" name="xsxm" />
           </div>
         </div>
         <div class="field">
           <div class="input">
-            <input type="text" name="sxnsys" placeholder="首选内饰颜色" />
+            <input type="text" placeholder="客户姓名" name="khxm" />
           </div>
         </div>
-        <div class="field">
-          <div class="input">
-            <input type="text" name="cxcsys" placeholder="次选车身颜色（选填）" />
+      </div>
+      <dl class="questions">
+        <dt class="question">1. 车主年龄</dt>
+        <dd class="answers">
+          <div class="field">
+            <div class="input">
+              <input type="tel" placeholder="车主年龄" name="cznn">
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="input">
-            <input type="text" name="cxnsys" placeholder="次选内饰颜色（选填）" />
-          </div>
-        </div>
-      </dd>
+        </dd>
 
-      <dt class="question">7. 变速箱偏好</dt>
-      <dd class="answers inline">
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="bsxph" value="自动" />自动</label>
+        <dt class="question">2. 考虑用车人数</dt>
+        <dd class="answers inline">
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="klycrs" value="1-2人" />1-2人</label>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="bsxph" value="手动" />手动</label>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="klycrs" value="3-4人" />3-4人</label>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="bsxph" value="无所谓" />无所谓</label>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="klycrs" value="5人" />5人</label>
+            </div>
           </div>
-        </div>
-      </dd>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="klycrs" value="5人以上" />5人以上</label>
+            </div>
+          </div>
+        </dd>
 
-      <dt class="question">8. 购车偏好</dt>
-      <dd class="answers inline">
-        <div class="field">
-          <div class="checkbox">
-            <label><input type="checkbox" name="gcph" value="准新车（1年内）" />准新车（1年内）</label>
+        <dt class="question">3. 是否首辆车</dt>
+        <dd class="answers inline">
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="sfslc" value="首辆" />首辆</label>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="checkbox">
-            <label><input type="checkbox" name="gcph" value="高性价比（2-3年）" />高性价比（2-3年）</label>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="sfslc" value="非首辆" />非首辆</label>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="checkbox">
-            <label><input type="checkbox" name="gcph" value="低价格（4年或以上）" />低价格（4年或以上）</label>
-          </div>
-        </div>
-      </dd>
+        </dd>
 
-      <dt class="question">9. 购车时间期望</dt>
-      <dd class="answers inline">
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="gcsjqw" value="1个月内" />1个月内</label>
+        <dt class="question">4. 车牌需求</dt>
+        <dd class="answers inline">
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="cpxq" value="有沪牌置换车" />有沪牌置换车</label>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="gcsjqw" value="3个月内" />3个月内</label>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="cpxq" value="在拍沪牌未中" />在拍沪牌未中</label>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="gcsjqw" value="6个月内" />6个月内</label>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="cpxq" value="计划拍沪牌" />计划拍沪牌</label>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="gcsjqw" value="6个月以上"/>6个月以上</label>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="cpxq" value="上外牌" />上外牌</label>
+            </div>
           </div>
-        </div>
-      </dd>
+        </dd>
 
-      <dt class="question">10. 购车预算（不含车牌）</dt>
-      <dd class="answers">
-        <div class="input">
-          <input type="tel" placeholder="购车预算（不含车牌）" name="gcys" ></div>
-        </div>
-      </dd>
-
-      <dt class="question">11. 购车款</dt>
-      <dd class="answers inline">
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="gck" value="全款" />全款</label>
+        <dt class="question">5. 偏好车款</dt>
+        <dd class="answers">
+          <div class="field">
+            <label>首选</label>
+            <div class="select">
+              <select name="phck_sx">
+                <option>车款1</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="radio">
-            <label><input type="radio" name="gck" value="分期付款" />分期付款</label>
+          <div class="field">
+            <label>次选（选填）</label>
+            <div class="select">
+              <select name="phck_cx">
+                <option>车款1</option>
+              </select>
+            </div>
           </div>
-        </div>
-      </dd>
-    </dl>
-  </form>
+          <div class="field">
+            <label>备选（选填）</label>
+            <div class="select">
+              <select name="phck_bx">
+                <option>车款1</option>
+              </select>
+            </div>
+          </div>
+        </dd>
 
+        <dt class="question">6. 偏好颜色</dt>
+        <dd class="answers">
+          <div class="field">
+            <div class="input">
+              <input type="text" name="sxcsys" placeholder="首选车身颜色" />
+            </div>
+          </div>
+          <div class="field">
+            <div class="input">
+              <input type="text" name="sxnsys" placeholder="首选内饰颜色" />
+            </div>
+          </div>
+          <div class="field">
+            <div class="input">
+              <input type="text" name="cxcsys" placeholder="次选车身颜色（选填）" />
+            </div>
+          </div>
+          <div class="field">
+            <div class="input">
+              <input type="text" name="cxnsys" placeholder="次选内饰颜色（选填）" />
+            </div>
+          </div>
+        </dd>
+
+        <dt class="question">7. 变速箱偏好</dt>
+        <dd class="answers inline">
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="bsxph" value="自动" />自动</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="bsxph" value="手动" />手动</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="bsxph" value="无所谓" />无所谓</label>
+            </div>
+          </div>
+        </dd>
+
+        <dt class="question">8. 购车偏好</dt>
+        <dd class="answers inline">
+          <div class="field">
+            <div class="checkbox">
+              <label><input type="checkbox" name="gcph" value="准新车（1年内）" />准新车（1年内）</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="checkbox">
+              <label><input type="checkbox" name="gcph" value="高性价比（2-3年）" />高性价比（2-3年）</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="checkbox">
+              <label><input type="checkbox" name="gcph" value="低价格（4年或以上）" />低价格（4年或以上）</label>
+            </div>
+          </div>
+        </dd>
+
+        <dt class="question">9. 购车时间期望</dt>
+        <dd class="answers inline">
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="gcsjqw" value="1个月内" />1个月内</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="gcsjqw" value="3个月内" />3个月内</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="gcsjqw" value="6个月内" />6个月内</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="gcsjqw" value="6个月以上"/>6个月以上</label>
+            </div>
+          </div>
+        </dd>
+
+        <dt class="question">10. 购车预算（不含车牌）</dt>
+        <dd class="answers">
+          <div class="field">
+            <div class="input">
+              <input type="tel" placeholder="购车预算（不含车牌）" name="gcys" />
+            </div>
+          </div>
+        </dd>
+
+        <dt class="question">11. 购车款</dt>
+        <dd class="answers inline">
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="gck" value="全款" />全款</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="radio">
+              <label><input type="radio" name="gck" value="分期付款" />分期付款</label>
+            </div>
+          </div>
+        </dd>
+        <dt><button class="btn block submit" type="submit">提交</button><dt>
+      </dl>
+
+    </form>
+  </div>
 </body>
 </html>

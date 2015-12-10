@@ -1,7 +1,7 @@
-@import './site.variable';
+@import '../global/site.variable';
 
 .form {
-  .control {
+  .field {
     @padding: 10px;
     margin-bottom: 10px;
     position: relative;
@@ -13,11 +13,23 @@
       border-radius: 5px;
     }
 
-    input {
+    input[type="text"],
+    input[type="search"],
+    input[type="tel"] {
       width: 100%;
       border: 1px solid @c_lightGrey;
       border-radius: 3px;
       padding: @padding;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    select {
+      display: block;
+      width: 100%;
+      font-size: 1.2rem;
     }
 
     .char-count {
@@ -43,5 +55,11 @@
   &.teal {
     background-color: @c_teal;
     color: @white;
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
 }

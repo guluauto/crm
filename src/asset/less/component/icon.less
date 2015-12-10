@@ -1,0 +1,93 @@
+@import '../global/site.variable';
+@import './icon-util.less';
+
+@keyframes loading {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+
+  &.icon-dot {
+    .dot(10px, @c_orange);
+  }
+
+  &.icon-del-dot {
+    .dot(18px, @c_orange);
+    border: 1px solid @white;
+    text-align: center;
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+      width: 6px;
+      height: 2px;
+      background-color: @white;
+    }
+  }
+
+  &.icon-plus {
+    .plus();
+  }
+
+  &.icon-minus {
+    .minus();
+  }
+
+  &.icon-spread {
+    display: inline-block;
+    vertical-align: middle;
+
+    .arrow(8px, 2px, -135deg, @c_grey);
+
+    &.white {
+      .arrow(8px, 2px, -135deg, @white);
+    }
+
+    &.teal {
+      .arrow(8px, 2px, -135deg, @c_teal);
+    }
+  }
+
+  &.icon-close {
+    display: inline-block;
+
+    &:before {
+      width: 40px;
+      height: 40px;
+      line-height: 35px;
+      border-radius: 40px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      border: 2px solid @white;
+      content: 'x';
+      font-size: 1.8rem;
+      color: @white;
+    }
+  }
+
+  &.icon-loading {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-left: 2px solid @c_teal;
+    border-top: 2px solid @c_lightGrey;
+    border-bottom: 2px solid @c_lightGrey;
+    border-right: 2px solid @c_lightGrey;
+    border-radius: 40px;
+    animation-duration: .8s;
+    animation-name: loading;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+  }
+}

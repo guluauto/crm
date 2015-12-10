@@ -1,0 +1,48 @@
+@import '../../less/global/site.variable';
+@import '../../less/component/mixin.less';
+
+.page {
+  .title {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .poster {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .questions {
+    padding: 10px;
+
+    .question {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .answers {
+      padding-left: 15px;
+      margin-left: 0;
+    }
+  }
+
+  .inline {
+    .clearfix();
+
+    .field {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  .submit {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: @c_orange;
+    color: @white;
+    font-weight: bolder;
+    margin-top: 20px;
+  }
+}
