@@ -17,6 +17,7 @@
   "author": "Kane",
   "license": "ISC",
   "dependencies": {
-    "normalize.css": "^3.0.3"
+    "normalize.css": "^3.0.3",
+    "zepto": "https://github.com/madrobby/zepto/tarball/v1.1.6"
   }
 }
