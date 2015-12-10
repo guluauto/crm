@@ -1,0 +1,22 @@
+{
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "咕噜客服关系管理系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.guluabc.com:FE/crm.git"
+  },
+  "keywords": [
+    "咕噜",
+    "crm"
+  ],
+  "author": "Kane",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^3.0.3"
+  }
+}
