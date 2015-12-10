@@ -23,8 +23,11 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      inject: true,
-      template: './src/page/index.html'
+      title: '问卷调查',
+      template: './src/page/index.html',
+      filename: 'index.html',
+      chunks: ['index', 'vendor'],
+      inject: 'body'
     })
   ],
   module: {
