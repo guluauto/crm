@@ -1,13 +1,13 @@
 {
   "name": "crm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "咕噜客服关系管理系统",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npm install; cd ./node_modules/zepto; npm install; npm run dist; cd ../../",
     "start": "./node_modules/.bin/webpack --config ./webpack.prd.config.js",
-    "dev": "npm run prestart; ./node_modules/.bin/imock -j mock -w dist & ./node_modules/.bin/webpack-dev-server --hot --inline"
+    "dev": "npm run prestart; ./node_modules/.bin/imock -j mock -w build & ./node_modules/.bin/webpack-dev-server --hot --inline"
   },
   "dest": "build",
   "repository": {
@@ -21,6 +21,7 @@
   "author": "Kane",
   "license": "ISC",
   "dependencies": {
+    "jqtpl": "^1.1.0",
     "normalize.css": "^3.0.3",
     "zepto": "https://github.com/madrobby/zepto/tarball/v1.1.6"
   },

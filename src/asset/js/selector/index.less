@@ -1,0 +1,27 @@
+@import '../../less/global/site.variable';
+@import '../../less/component/mixin.less';
+
+.selector {
+  position: absolute;
+  width: 40%;
+  top: 0;
+  left: 60%;
+  z-index: 10;
+  background-color: @c_black;
+
+  .list {
+    .item {
+      padding: 10px 15px;
+      border-bottom: 1px solid @c_lightBlack;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        color: @white;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

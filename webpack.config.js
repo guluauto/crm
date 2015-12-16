@@ -90,7 +90,7 @@ module.exports = {
     hot: true,
     inline: true,
     proxy: {
-      '/api*': {
+      '/*': {
           target: 'http://o.dp:3000',
           secure: false
       }
