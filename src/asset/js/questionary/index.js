@@ -6,10 +6,23 @@ import Loading from '../loading/';
 import Selector from '../selector/';
 
 let $form = $('[eid="form"]');
+let $name = $('[name="customer"]');
+
+let validate = () => {
+  if ($.trim($name.val()) === '') {
+    alert('客户姓名必须填写');
+
+    return false;
+  }
+}
 
 $form.on('submit', (e) => {
   e.preventDefault();
   e.stopPropagation();
+
+  if (!validate()) {
+    return;
+  }
 
   Loading.show('提交中...');
 
@@ -68,6 +81,9 @@ $form.on('submit', (e) => {
       alert('提交成功');
 
       location.reload();
+    },
+    error: () => {
+      alert('提交失败');
     }
   });
 });
