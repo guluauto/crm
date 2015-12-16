@@ -6,17 +6,16 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var pkg = require('./package.json');
 
 module.exports = {
-  watch: true,
   entry: {
     'questionary-list': './src/asset/js/questionary-list/index.js',
     questionary: './src/asset/js/questionary/index.js',
-    vendor: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './node_modules/zepto/dist/zepto.js']
+    vendor: ['./node_modules/zepto/dist/zepto.js']
   },
   output: {
     path: path.resolve(__dirname, pkg.dest),
     publicPath: '/' + pkg.dest,
     filename: '[name].js',
-    chunkFilename: "[id].chunk.js"
+    chunkFilename: '[id].chunk.js'
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
@@ -84,16 +83,5 @@ module.exports = {
       new LessPluginCleanCSS({ advanced: true, keepSpecialComments: false }),
       new LessPluginAutoPrefix({ browsers: ['last 3 versions', 'Android 4'] })
     ]
-  },
-  devtool: 'eval-source-map',
-  devServer: {
-    hot: true,
-    inline: true,
-    proxy: {
-      '/api*': {
-          target: 'http://o.dp:3000',
-          secure: false
-      }
-    }
   }
 };

@@ -42,7 +42,7 @@
 }
 
 .btn {
-  @padding: 5px 15px;
+  @padding: 10px 15px;
   @borderRadius: 3px;
 
   display: inline-block;
@@ -51,9 +51,15 @@
   background-color: none;
   border: none;
   font-size: 1.3rem;
+  text-align: center;
 
   &.teal {
     background-color: @c_teal;
+    color: @white;
+  }
+
+  &.orange {
+    background-color: @c_orange;
     color: @white;
   }
 
@@ -61,5 +67,6 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 0;
   }
 }

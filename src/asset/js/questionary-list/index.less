@@ -1,0 +1,46 @@
+@import '../../less/global/site.variable';
+@import '../../less/component/form.less';
+@import '../../less/component/mixin.less';
+
+.page {
+  .subtitle {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: @c_lightBlack;
+  }
+
+  .list {
+    > li {
+      border-bottom: 1px solid @c_lightGrey;
+
+      &:first-child {
+        border-top: 1px solid @c_lightGrey;
+      }
+
+      > a {
+        display: block;
+        padding: 10px;
+        color: @black;
+
+        b {
+          font-size: 1.2rem;
+          color: @c_black;
+        }
+
+        span {
+          color: @c_lightBlack;
+          float: right;
+        }
+      }
+    }
+  }
+
+  .actions {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
