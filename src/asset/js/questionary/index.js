@@ -14,6 +14,8 @@ let validate = () => {
 
     return false;
   }
+
+  return true;
 }
 
 $form.on('submit', (e) => {
