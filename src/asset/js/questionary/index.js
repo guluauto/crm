@@ -29,7 +29,6 @@ $form.on('submit', (e) => {
   let url = $form.attr('action');
 
   let sData = $form.serializeArray();
-  console.log(sData);
 
   let data = {};
   sData.forEach((field) => {
