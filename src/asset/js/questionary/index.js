@@ -148,7 +148,6 @@ $phck.on('click', (e) => {
   let $input = $(e.currentTarget);
   let $_input = $input.parent().find('input[type="hidden"]');
 
-  // let offset = $input.offset();
   let ws = $(window).scrollTop();
 
   getBrands((data) => {
@@ -157,7 +156,7 @@ $phck.on('click', (e) => {
       onSelect: (brand) => {
         getSeries(brand.id, (data) => {
           $input.val(brand.text);
-          
+
           let selector = new Selector({
             data: data,
             onSelect: (series) => {
