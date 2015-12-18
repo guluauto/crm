@@ -14,7 +14,7 @@ const defaultOpts = {
 
 export default class Selector {
   constructor(opts) {
-    this.opts = Object.assign({}, defaultOpts, opts || {});
+    this.opts = $.extend({}, defaultOpts, opts || {});
 
     this.show();
   }
