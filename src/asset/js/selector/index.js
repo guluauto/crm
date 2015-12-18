@@ -43,9 +43,14 @@ export default class Selector {
       e.stopPropagation();
 
       let id = parseInt($(e.currentTarget).attr('data-id'));
-      this.opts.onSelect.call(this, this.opts.data.find((item) => {
+
+      let f = this.opts.data.filter((item) => {
         return item.id === id;
-      }));
+      });
+
+      if (f && f.length) {
+        this.opts.onSelect.call(this, f[0]);
+      }
 
       this.$tpl.remove();
     });
