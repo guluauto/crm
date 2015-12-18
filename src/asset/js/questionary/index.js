@@ -63,8 +63,6 @@ $form.on('submit', (e) => {
     data[k] = v;
   });
 
-  console.log(data);
-
   $.ajax({
     url: url,
     type: 'POST',
@@ -72,7 +70,7 @@ $form.on('submit', (e) => {
     contentType: 'application/json',
     dataType: 'json',
     success: (res) => {
-      if (res.code !== 200) {
+      if (res.code !== 0) {
         alert('提交失败，请重试!\n错误信息:\n' + res.msg);
 
         return;
@@ -81,7 +79,7 @@ $form.on('submit', (e) => {
       Loading.close();
       alert('提交成功');
 
-      location.reload();
+      history.back();
     },
     error: () => {
       alert('提交失败');
