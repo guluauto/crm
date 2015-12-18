@@ -161,7 +161,7 @@ $phck.on('click', (e) => {
             data: data,
             onSelect: (series) => {
               $input.val(`${brand.text}-${series.text}`);
-              $_input.val(series.seriesId);
+              $_input.val(series.id);
               $(window).scrollTop(ws);
             }
           });
