@@ -31,8 +31,8 @@ $form.on('submit', (e) => {
   let url = $form.attr('action');
 
   let sData = $form.serializeArray();
-
   let data = {};
+
   sData.forEach((field) => {
     let k = field.name;
     let v = field.value;
@@ -53,9 +53,9 @@ $form.on('submit', (e) => {
       v = null
     }
 
-    if (data[k] != null) {
-      let _v = data[k];
-      data[k] = [_v, v];
+    if (k === 'preference') {
+      data[k] = data[k] || [];
+      data[k].push(v)
 
       return;
     }
@@ -146,16 +146,24 @@ $phck.on('click', (e) => {
   e.stopPropagation();
 
   let $input = $(e.currentTarget);
+  let $_input = $input.parent().find('input[type="hidden"]');
+
+  // let offset = $input.offset();
+  let ws = $(window).scrollTop();
 
   getBrands((data) => {
     let selector = new Selector({
       data: data,
-      onSelect: (brandId) => {
-        getSeries(brandId, (data) => {
+      onSelect: (brand) => {
+        getSeries(brand.id, (data) => {
+          $input.val(brand.text);
+          
           let selector = new Selector({
             data: data,
-            onSelect: (seriesId) => {
-              $input.val(seriesId);
+            onSelect: (series) => {
+              $input.val(`${brand.text}-${series.text}`);
+              $_input.val(series.seriesId);
+              $(window).scrollTop(ws);
             }
           });
         });
