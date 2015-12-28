@@ -8,6 +8,7 @@ var pkg = require('./package.json');
 module.exports = {
   watch: true,
   entry: {
+    'buy-car': './src/asset/js/buy-car/index.js',
     'questionary-list': './src/asset/js/questionary-list/index.js',
     questionary: './src/asset/js/questionary/index.js',
     vendor: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './node_modules/zepto/dist/zepto.js']
@@ -37,6 +38,13 @@ module.exports = {
       template: './src/page/questionary-list.html',
       filename: 'questionary-list.html',
       chunks: ['questionary-list', 'vendor'],
+      inject: 'body'
+    }),
+    new HtmlWebpackPlugin({
+      title: '淘车委托单',
+      template: './src/page/buy-car.html',
+      filename: 'buy-car.html',
+      chunks: ['buy-car', 'vendor'],
       inject: 'body'
     })
   ],
@@ -91,7 +99,7 @@ module.exports = {
     inline: true,
     proxy: {
       '/*': {
-          target: 'http://o.dp:3000',
+          target: 'http://localhost:3000',
           secure: false
       }
     }

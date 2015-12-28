@@ -7,6 +7,7 @@ var pkg = require('./package.json');
 
 module.exports = {
   entry: {
+    'buy-car': './src/asset/js/buy-car/index.js',
     'questionary-list': './src/asset/js/questionary-list/index.js',
     questionary: './src/asset/js/questionary/index.js',
     vendor: ['./node_modules/zepto/dist/zepto.js']

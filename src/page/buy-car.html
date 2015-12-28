@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="browsermode" content="application">
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>{%= o.htmlWebpackPlugin.options.title %}</title>
+</head>
+<body>
+  <div class="page">
+    <h1 class="title">淘车委托单</h1>
+    <form class="form" action="/api/survey" eid="form">
+      <div class="poster">
+        <h2 class="subtitle">基本信息</h2>
+        <div class="field">
+          <div class="input">
+            <input type="text" placeholder="委托人" name="consignor" />
+          </div>
+        </div>
+        <div class="field">
+          <div class="input">
+            <input type="date" placeholder="日期" name="customer_mobile" />
+          </div>
+        </div>
+        <div class="field">
+          <div class="input">
+            <input type="text" placeholder="车主姓名" name="car_master" />
+          </div>
+        </div>
+        <div class="field">
+          <div class="input">
+            <input type="tel" placeholder="联系方式" name="contact" />
+          </div>
+        </div>
+        <div class="field">
+          <div class="input">
+            <input type="text" placeholder="上牌要求" name="card_claim" />
+          </div>
+        </div>
+        <div class="field">
+          <div class="input">
+            <input type="tel" placeholder="预算" name="money" />
+          </div>
+        </div>
+      </div>
+
+      <div class="model">
+        <h2 class="subtitle">车型一</h2>
+        <dl class="questions">
+          <dt class="question">选择车型</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" eid="phck" readonly placeholder="选择车型" />
+                <input type="hidden" name="car_model_1" placeholder="选择车型" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">车身颜色</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_color_1" placeholder="车身颜色" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">内饰颜色</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_trim_color_1" placeholder="内饰颜色" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">年份要求</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_year_1" placeholder="年份要求" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">里程要求</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_mileage_1" placeholder="里程要求" />
+              </div>
+            </div>
+          </dd>
+          <dt class="question">配置要求</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_config_1" placeholder="里程要求" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">成色要求</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_quality_1" placeholder="成色要求" />
+              </div>
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="model">
+        <h2 class="subtitle">车型二</h2>
+        <dl class="questions">
+          <dt class="question">选择车型</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" eid="phck" readonly placeholder="选择车型" />
+                <input type="hidden" name="car_model_2" placeholder="选择车型" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">车身颜色</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_color_2" placeholder="车身颜色" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">内饰颜色</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_trim_color_2" placeholder="内饰颜色" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">年份要求</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_year_2" placeholder="年份要求" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">里程要求</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_mileage_2" placeholder="里程要求" />
+              </div>
+            </div>
+          </dd>
+          <dt class="question">配置要求</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_config_2" placeholder="里程要求" />
+              </div>
+            </div>
+          </dd>
+
+          <dt class="question">成色要求</dt>
+          <dd class="answers">
+            <div class="field">
+              <div class="input">
+                <input type="text" name="car_quality_2" placeholder="成色要求" />
+              </div>
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <button class="btn block orange submit" type="submit">提交</button>
+    </form>
+  </div>
+</body>
+</html>

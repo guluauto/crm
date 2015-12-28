@@ -7,15 +7,8 @@ import Selector from '../selector/';
 import ModelSel from '../model-sel/';
 
 let $form = $('[eid="form"]');
-let $name = $('[name="customer"]');
 
 let validate = () => {
-  if ($.trim($name.val()) === '') {
-    alert('客户姓名必须填写');
-
-    return false;
-  }
-
   return true;
 }
 
@@ -42,23 +35,8 @@ $form.on('submit', (e) => {
       v = parseInt(v, 10);
     }
 
-    if (v === 'true') {
-      v = true;
-    }
-
-    if (v === 'false') {
-      v = false;
-    }
-
     if (v === '') {
       v = null
-    }
-
-    if (k === 'preference') {
-      data[k] = data[k] || [];
-      data[k].push(v)
-
-      return;
     }
 
     data[k] = v;
