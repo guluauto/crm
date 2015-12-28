@@ -7,8 +7,44 @@ import Selector from '../selector/';
 import ModelSel from '../model-sel/';
 
 let $form = $('[eid="form"]');
+let $consignor = $('[name="consignor"]');
+let $date = $('[name="date"]');
+let $car_master = $('[name="car_master"]');
+let $contact = $('[name="contact"]');
+let $card_claim = $('[name="card_claim"]');
+let $money = $('[name="money"]');
 
 let validate = () => {
+  if ($.trim($consignor.val()) === '') {
+    alert('请填写委托人');
+    return false;
+  }
+
+  if ($.trim($date.val()) === '') {
+    alert('请填写日期');
+    return false;
+  }
+
+  if ($.trim($car_master.val()) === '') {
+    alert('车主姓名');
+    return false;
+  }
+
+  if ($.trim($contact.val()) === '') {
+    alert('联系方式');
+    return false;
+  }
+
+  if ($.trim($card_claim.val()) === '') {
+    alert('上牌要求');
+    return false;
+  }
+
+  if ($.trim($money.val()) === '') {
+    alert('预算');
+    return false;
+  }
+
   return true;
 }
 
