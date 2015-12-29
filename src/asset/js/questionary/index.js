@@ -83,6 +83,7 @@ $form.on('submit', (e) => {
       history.back();
     },
     error: () => {
+      Loading.close();
       alert('提交失败');
     }
   });

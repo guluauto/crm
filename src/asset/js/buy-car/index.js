@@ -22,22 +22,22 @@ let validate = () => {
   }
 
   if ($.trim($car_master.val()) === '') {
-    alert('车主姓名');
+    alert('请填写车主姓名');
     return false;
   }
 
   if ($.trim($contact.val()) === '') {
-    alert('联系方式');
+    alert('请填写联系方式');
     return false;
   }
 
   if ($.trim($card_claim.val()) === '') {
-    alert('上牌要求');
+    alert('请填写上牌要求');
     return false;
   }
 
   if ($.trim($money.val()) === '') {
-    alert('预算');
+    alert('请填写预算');
     return false;
   }
 
@@ -98,6 +98,7 @@ $form.on('submit', (e) => {
       history.back();
     },
     error: () => {
+      Loading.close();
       alert('提交失败');
     }
   });
