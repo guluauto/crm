@@ -1,6 +1,6 @@
 {
   "name": "crm",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "咕噜客服关系管理系统",
   "main": "index.js",
   "scripts": {
