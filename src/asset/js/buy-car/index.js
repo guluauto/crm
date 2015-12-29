@@ -20,10 +20,10 @@ let validate = () => {
     return false;
   }
 
-  if ($.trim($date.val()) === '') {
-    alert('请填写日期');
-    return false;
-  }
+  // if ($.trim($date.val()) === '') {
+  //   alert('请填写日期');
+  //   return false;
+  // }
 
   if ($.trim($car_master.val()) === '') {
     alert('车主姓名');
