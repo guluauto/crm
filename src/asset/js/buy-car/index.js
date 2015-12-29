@@ -8,22 +8,18 @@ import ModelSel from '../model-sel/';
 
 let $form = $('[eid="form"]');
 let $consignor = $('[name="consignor"]');
-let $date = $('[name="date"]');
+// let $date = $('[name="date"]');
 let $car_master = $('[name="car_master"]');
 let $contact = $('[name="contact"]');
 let $card_claim = $('[name="card_claim"]');
 let $money = $('[name="money"]');
+let $model = $('[name="car_model_1"]');
 
 let validate = () => {
   if ($.trim($consignor.val()) === '') {
     alert('请填写委托人');
     return false;
   }
-
-  // if ($.trim($date.val()) === '') {
-  //   alert('请填写日期');
-  //   return false;
-  // }
 
   if ($.trim($car_master.val()) === '') {
     alert('车主姓名');
@@ -42,6 +38,11 @@ let validate = () => {
 
   if ($.trim($money.val()) === '') {
     alert('预算');
+    return false;
+  }
+
+  if ($.trim($model.val()) === '') {
+    alert('请选择一个车型');
     return false;
   }
 
